@@ -1,7 +1,20 @@
  AOS.init({
  	duration: 800,
- 	easing: 'slide'
+ 	easing: 'slide',
+	once: false,
  });
+
+
+ // Get the container element
+var btnContainer = document.querySelector(".navbar-nav");
+
+var btns = btnContainer.querySelectorAll(".nav-item");
+
+for (let i = 0; i < btns.length; i++) {
+	btns[i].addEventListener('click', function(){
+		btns[i].classList.add('active');
+	})
+}
 
 (function($) {
 
@@ -67,7 +80,7 @@
 		});
 		$('#gallery1').owlCarousel({
 			autoplay: true,
-			items:4,
+			items:3,
 			loop: true,
 			slideBy: 1,
 			autoplaySpeed: 1000,
@@ -76,6 +89,17 @@
 			dots: false,
 			nav: true,
 			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+			responsive:{
+				0:{
+					items: 1,
+				},
+				600:{
+					items: 2,
+				},
+				1000:{
+					items: 3,
+				}
+			}
 		});
 		$('#gallery2').owlCarousel({
 			autoplay: true,
@@ -87,6 +111,20 @@
 			slideBy: -1,
 			nav: true,
 			navText: ['<span class="ion-ios-arrow-back">', '<span class="ion-ios-arrow-forward">'],
+			responsive:{
+				0:{
+					items: 1,
+				},
+				600:{
+					items: 2,
+				},
+				900:{
+					items: 3,
+				},
+				1200:{
+					items:4,
+				}
+			}
 		});
 
 	};
