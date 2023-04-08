@@ -12,6 +12,7 @@
   --red: #dc3545;
   --orange: #e57d2e;
   --yellow: #e5d92e;
+  --yellowish:#ffdd00;
   --green: #28a745;
   --teal: #20c997;
   --cyan: #17a2b8;
@@ -8190,7 +8191,7 @@ h1, h2, h3, h4, h5,
 
 .form-control {
   height: 58px !important;
-  background: #fff !important;
+  background: var(--orange) !important;
   color: #000 !important;
   font-size: 18px;
   border-radius: 0px;
@@ -9601,7 +9602,7 @@ box-shadow: 0 0 10px #000;
 overflow: hidden;
 max-width: 500px;
 height: 340px;
-background-color: var(--orange);
+/* background-color: var(--orange); */
 }
 .alumni-img img{
   height: 100%;
@@ -9683,4 +9684,11 @@ object-fit: cover;
 .blog-entry{
 flex-wrap: wrap;
 } 
+}
+
+.event-border{
+  border: 3px solid black;
+}
+ .set-text{
+  background-color: var(--yellowish) !important;
 }
