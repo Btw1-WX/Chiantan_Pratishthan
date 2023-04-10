@@ -16,7 +16,7 @@
   --green: #28a745;
   --teal: #20c997;
   --cyan: #17a2b8;
-  --white: #fff;
+  --white:#dededee3;;
   --gray: #6c757d;
   --gray-dark: #343a40;
   --primary: #78d5ef;
@@ -9518,7 +9518,7 @@ swiper-slide img {
 display: block;
 width: 100%;
 height: 100%;
-object-fit: cover;
+object-fit: fill !important;
 }
 
 
@@ -9534,13 +9534,18 @@ background-size: cover;
 background-position: center;
 }
 
+
 .mySwiper {
-height: 35em;
-width: 100%;  
+/* height: 35em; */
+height: 600px;
+width: 90%;  
 }
 
 .mySwiper2 {
-height: 14em;
+/* height: 14em; */
+
+height: 10em;
+width: 80%;
 box-sizing: border-box;
 padding: 10px 0;
 }
@@ -9560,7 +9565,7 @@ swiper-slide img {
 display: block;
 width: 100%;
 height: 100%;
-object-fit: cover;
+object-fit: fill !important;
 }
 
 @media(max-width:768px){
@@ -9570,8 +9575,16 @@ flex-wrap: wrap;
 }
 
 .event-border{
-  border: 3px solid black;
+  /* border: 3px solid black; */
+  box-shadow: 3px 3px 10px 3px var(--orange);
 }
  .set-text{
   background-color: var(--yellowish) !important;
+  box-shadow: -2px 0px 15px 0px #00000099;
+}
+.event-section p, .event-section .mr-2,.event-section span{
+  color: black;
+}
+.event-border p{
+  color: black;
 }
