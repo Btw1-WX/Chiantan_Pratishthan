@@ -1,20 +1,20 @@
  AOS.init({
  	duration: 800,
+	offset: 200,
  	easing: 'slide',
 	once: false,
  });
 
+ var btns = document.querySelectorAll('.nav-link');
 
- // Get the container element
-var btnContainer = document.querySelector(".navbar-nav");
-
-var btns = btnContainer.querySelectorAll(".nav-item");
-
-for (let i = 0; i < btns.length; i++) {
-	btns[i].addEventListener('click', function(){
-		btns[i].classList.add('active');
-	})
-}
+ for (let i = 0; i < btns.length; i++) {
+   btns[i].addEventListener("click", function () {
+	 for (let j = 0; j < btns.length; j++) {
+	   btns[j].style.color = '';
+	 }
+	 btns[i].style.color = 'var(--orange)';
+   });
+ }
 
 (function($) {
 
